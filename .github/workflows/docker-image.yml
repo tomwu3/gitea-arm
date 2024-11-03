@@ -36,5 +36,5 @@ jobs:
           context: .
           push: true
           file: ./Dockerfile
-          platforms: linux/arm/6,linux/arm
+          platforms: linux/arm/6
           tags: ${{ steps.meta.outputs.tags }}
