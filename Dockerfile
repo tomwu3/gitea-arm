@@ -14,7 +14,7 @@ RUN tar xf ../gitea.tar.gz --strip-components=1
 COPY makefile.patch makefile.patch
 #RUN patch < makefile.patch
 
-RUN VERSION=${GITEA_VERSION} make js css
+RUN VERSION=latest make js css
 
 FROM golang:1.13-alpine3.11 AS build-env
 
