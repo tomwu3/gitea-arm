@@ -12,7 +12,7 @@ RUN if [ "$GITEA_VERSION" = "latest" ]; then GITEA_VERSION=$(wget --quiet "https
 RUN tar xf ../gitea.tar.gz --strip-components=1
 
 COPY makefile.patch makefile.patch
-RUN patch < makefile.patch
+#RUN patch < makefile.patch
 
 RUN VERSION=${GITEA_VERSION} make js css
 
